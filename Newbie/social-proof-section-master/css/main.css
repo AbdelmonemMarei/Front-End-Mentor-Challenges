@@ -1,0 +1,213 @@
+:root{
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+/* global styles */
+*{
+    margin: 0;
+}
+body{
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 15px;
+    background-color: var(--White);
+}
+/* -------------------------- */
+/* start styles */
+.container{
+    max-width: 1000px;
+    margin: 0px auto;
+    position: relative;
+    padding: 80px 80px 50px;
+    overflow: hidden;
+}
+.container::before{
+    content: url(../images/bg-pattern-top-desktop.svg);
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.container::after{
+    content: url(../images/bg-pattern-bottom-desktop.svg);
+    max-width: 100%;
+    position: absolute;
+    bottom: -60px;
+    right: -60px;
+    z-index: -1;
+}
+.container .about{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.container .about .description h2{
+    color: var(--Very-Dark-Magenta);
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.container .about .description >p{
+    color: var(--Dark-Grayish-Magenta);
+    max-width: 385px;
+    line-height: 1.5;
+}
+.container .about .ratings{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+}
+.container .about .ratings .rate{
+    display: flex;
+    align-items: center;
+    background-color: var(--Light-Grayish-Magenta);
+    padding: 15px 15px 15px 30px;
+    border-radius: 8px;
+    font-weight: 500;
+    width: 330px;
+}
+.container .about .ratings .rate:first-of-type{
+    margin-left: -100px;
+}
+.container .about .ratings .rate:nth-of-type(2){
+    margin-left: -50px;
+}
+.container .about .ratings .rate .stars{
+    display: flex;
+    margin-right: 20px;
+}
+.container .about .ratings .rate .stars img{
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+.container .about .ratings .rate p{
+    color: var(--Very-Dark-Magenta);
+    font-weight: 700;
+}
+.container .testimonials{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 50px;
+    padding: 50px 0;
+}
+.container .testimonials .card{
+    background-color: var(--Very-Dark-Magenta);
+    color: var(--Light-Grayish-Magenta);
+    max-width: 260px;
+    height: 185px;
+    padding: 35px 30px 0;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.container .testimonials .card:first-of-type{
+    margin-top: -40px;
+}
+.container .testimonials .card:nth-of-type(2){
+    margin-top: -20px;
+}
+.container .testimonials .card .person{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.container .testimonials .card .person img{
+    width: 40px;
+    margin-right: 25px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.container .testimonials .card .person .per-id >P:last-of-type{
+    color: var(--Soft-Pink);
+    margin-top: 5px;
+}
+.container .testimonials .card .message{
+    line-height: 1.25;
+    margin-top: 25px;
+}
+@media (max-width:991px) {
+    .container{
+        max-width: 350px;
+        position: relative;
+        padding: 80px 10px;
+        overflow: hidden;
+    }
+    .container::before{
+        content: url(../images/bg-pattern-top-mobile.svg);
+        max-width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    .container::after{
+        content: url(../images/bg-pattern-bottom-mobile.svg);
+        max-width: 100%;
+        position: absolute;
+        bottom: -40px;
+        right: 0px;
+        z-index: -1;
+    }
+    .container .about{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .container .about .ratings{
+        margin:20px 0;
+    }
+    .container .about .ratings .rate{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+        align-items: center;
+        margin: auto !important;
+        background-color: var(--Light-Grayish-Magenta);
+        width: 290px;
+    }
+    .container .about .ratings .rate .stars{
+        display: block;
+        margin-right: 0px;
+    }
+    .container .testimonials{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+        padding: 0;
+    }
+    .container .testimonials .card{
+        margin: 0!important;
+    }
+}
+@media (max-width:280px) {
+    .container .about .ratings .rate{
+        max-width: 230px;
+    }
+    .container .testimonials .card{
+        padding: 35px 30px 20px;
+    }
+}
+@media (max-height:600px) {
+    .container{
+        height:540px ;
+        padding: 30px;
+        overflow: hidden;
+    }
+}
+/* There are several media queries due to there are several screen style-guide.md file of challenge does not recognize*/
+/* End styles */
