@@ -1,0 +1,117 @@
+:root{
+    --first-color:hsl(31, 77%, 52%);
+    --second-color:hsl(184, 100%, 22%);
+    --third-color:hsl(179, 100%, 13%);
+    --btn-hover:hsl(0, 0%, 95%);
+    --border-radius:10px;
+}
+/* global styles */
+*{
+    font-family:'Lexend Deca', sans-serif;
+    font-size: 15px;
+}
+
+h2{
+    font-size: 2em;
+    color:var(--btn-hover);
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+p{
+    color: hsla(0, 0%, 100%, 0.75);
+    max-width: 240px;
+    line-height: 1.5;
+    word-spacing: 2px;
+    margin: 25px 0;
+}
+/* -------------------------- */
+/* start styles */
+.container{
+    height: 100vh;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.cards-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@media(max-width:769px){
+    .container{
+        height: fit-content;
+        padding: 20px 0;
+    }
+    .cards-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.cards-container >div{
+    padding: 40px;
+}
+.cards-container >div button{
+    margin: 40px 0px 20px;
+    border: 3px solid transparent;
+    padding: 15px 45px;
+    border-radius: 30px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+}
+.cards-container>div button:hover{
+    color: var(--btn-hover);
+    border: 3px solid var(--btn-hover);
+}
+.cards-container .first-card{
+    background-color: var(--first-color);
+    border-top-left-radius: 10px ;
+    border-bottom-left-radius: 10px ;
+}
+.cards-container .first-card button{
+    color: var(--first-color);
+}
+.cards-container .first-card button:hover{
+    background-color: var(--first-color);
+}
+.cards-container .second-card{
+    background-color: var(--second-color);
+}
+.cards-container .second-card button{
+    color: var(--second-color);
+}
+.cards-container .second-card button:hover{
+    background-color: var(--second-color);
+}
+.cards-container .third-card{
+    background-color: var(--third-color);
+    border-top-right-radius: var(--border-radius) ;
+    border-bottom-right-radius: var(--border-radius) ;
+}
+.cards-container .third-card button{
+    color: var(--third-color);
+}
+.cards-container .third-card button:hover{
+    background-color: var(--third-color);
+}
+@media(max-width:769px){
+    .cards-container .first-card{
+        border-top-left-radius: var(--border-radius) ;
+        border-top-right-radius: var(--border-radius) ;
+        border-bottom-left-radius: 0px ;
+    }
+    .cards-container .third-card{
+        background-color: var(--third-color);
+        border-bottom-left-radius: var(--border-radius) ;
+        border-bottom-right-radius: var(--border-radius) ;
+        border-top-right-radius: 0px ;
+    }
+}
