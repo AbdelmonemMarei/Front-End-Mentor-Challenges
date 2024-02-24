@@ -2,6 +2,8 @@
 
 This is a solution to the [Four card feature section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
+![Desgin Require](./design/desktop-preview.jpg) 
+
 ## Table of contents
 
 - [Overview](#overview)
@@ -14,8 +16,6 @@ This is a solution to the [Four card feature section challenge on Frontend Mento
   - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -32,8 +32,9 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github Source Files](https:/example.com)
+- Github URL: [Github Source Files](https://github.com/AbdelmonemMarei/Front-End-Mentor-Challenges/tree/main/Newbie/four-card-feature-section-master)
+- Live Site URL: [Live Site URL](https://abdelmonemmarei.github.io/Front-End-Mentor-Challenges/Newbie/four-card-feature-section-master/)
 
 ## My process
 
@@ -80,4 +81,6 @@ I need to Learn More about Grid Methods to custom responsive site layout
 
 - Frontend Mentor - [@AbdelmonemMarei](https://www.frontendmentor.io/profile/AbdelmonemMarei)
 - Github - [AbdelmonemMarei](https://github.com/AbdelmonemMarei)
+
+
 
