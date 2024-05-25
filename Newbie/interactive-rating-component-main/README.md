@@ -32,6 +32,8 @@ Users should be able to:
 ### Screenshot
 ![Large Screen](./screenshot1.png) 
 ![Small Screen](./screenshot2.png) 
+![Thank you screen ](./screenshot3.png) 
+
 
 ### Links
 
