@@ -1,0 +1,130 @@
+:root{
+    --Dark-Cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --very-Dark-Blue: hsl(212, 21%, 14%);
+    --Dark-Grayish-Blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+/* global styles */
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Fraunces','Montserrat',serif,sans-serif;
+    font-size: 14px;
+}
+/* -------------------------- */
+/* start styles */
+.container{
+    background-color: var(--Cream);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-container{
+    background-color: var(--White);
+    width: 650px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: #bdb7b1b8 0px 0px 3px 2px;
+}
+.container .card-container .image{
+    width: 50%;
+    background-image: url(../images/image-product-desktop.jpg);
+    background-size: cover;
+    height: 450px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.container .card-container .content{
+    width: 50%;
+    padding: 30px;
+}
+.container .card-container .content >p:first-child{
+    font-family: 'Montserrat',sans-serif ;
+    font-weight: 700;
+    color: var(--Dark-Grayish-Blue);
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+.container .card-container .content >h2{
+    font-weight: 700;
+    font-size: 2em;
+    margin: 20px 0;
+    max-width: 200px;
+}
+.container .card-container .content >p:nth-child(3){
+    color: var(--Dark-Grayish-Blue);
+    line-height: 1.5;
+    font-family: 'Montserrat',sans-serif ;
+    font-weight: 500;
+    max-width: 240px;
+}
+.container .card-container .content .price{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 0;
+}
+.container .card-container .content .price >p:first-child{
+    color: var(--Dark-Cyan);
+    font-size: 2em;
+}
+.container .card-container .content .price >p:last-child{
+    color: var(--Dark-Grayish-Blue);
+    margin-left: 20px;
+}
+.container .card-container .content button{
+    display: block;
+    background-color: var(--Dark-Cyan);
+    border: none;
+    color: var(--White);
+    padding: 15px;
+    width: 270px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.container .card-container .content button:hover{
+    background-color: hsl(158, 53%, 17%);
+}
+.container .card-container .content button span{
+    margin-right: 10px;
+}
+
+@media (max-width:687px) {
+    .container{
+        padding: 20px;
+    }
+    .container .card-container{
+        flex-direction: column;
+        max-width: 350px;
+    }
+    .container .card-container .image{
+        width: 100%;
+        background-image: url(../images/image-product-mobile.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 250px;
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .container .card-container .content{
+        width: 100%;
+    }
+    .container .card-container .content >h2,
+    .container .card-container .content >p:nth-child(3){
+        max-width: 300px;
+    }
+}
+
