@@ -36,7 +36,7 @@ Users should be able to:
 
 ### Links
 - Github URL: [Github Source Files](https://github.com/AbdelmonemMarei/Front-End-Mentor-Challenges/tree/main/Newbie/intro-component-with-signup-form-master)
-- Live Site URL: [Live Site URL](https://github.com/AbdelmonemMarei/Front-End-Mentor-Challenges/tree/main/Newbie/intro-component-with-signup-form-master)
+- Live Site URL: [Live Site URL](https://abdelmonemmarei.github.io/Front-End-Mentor-Challenges/Newbie/intro-component-with-signup-form-master/)
 
 ## My process
 
