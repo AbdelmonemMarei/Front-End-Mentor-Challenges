@@ -1,0 +1,193 @@
+:root{
+    --Red: hsl(0, 100%, 74%);
+    --Green:hsl(154, 59%, 51%);
+    --Blue: hsl(248, 32%, 49%);
+    --Dark-Blue: hsl(249, 10%, 26%);
+    --Grayish-Blue: hsl(246, 25%, 77%);
+}
+/* global styles */
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+/* -------------------------- */
+/* start styles */
+.container{
+    background-color: var(--Red);
+    background-image: url(../images/bg-intro-desktop.png);
+    display: flex;
+    flex-direction: row;
+    padding: 100px 50px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+.container .content h2{
+    font-size: 2em;
+    max-width: 300px;
+    line-height: 1.25;
+    margin-bottom: 15px;
+}
+.container .content p{
+    font-size: 0.75em;
+    max-width: 400px;
+}
+.container .user-form{
+    margin-left: 50px;
+    width: 400px;
+}
+.container .user-form .offer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Blue);
+    width: inherit;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0px 6px 5px 0px hsl(249deg 10% 26% / 40%);
+}
+.container .user-form .offer p{
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: white;
+    margin-right: 5px;
+}
+.container .user-form .offer span{
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: hsl(246deg 13% 92%);
+}
+.container .user-form .inputs{
+    padding: 25px;
+    background-color: white;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: 0px 6px 0px 0px hsl(249deg 10% 26% / 40%);
+}
+.container .user-form .inputs form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.container .user-form .inputs form input{
+    position: relative;
+    width: 100%;
+    padding: 12px 24px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    outline:none ;
+    border: 1px solid hsl(246deg 21.77% 90.12% / 86%) ;
+}
+.container .user-form .inputs form input:focus{
+    border: 1px solid var(--Dark-Blue) ;
+}
+.container .user-form .inputs form input.error{
+    border: 1px solid var(--Red) ;
+    background-image: url(../images/icon-error.svg);
+    background-position:calc(100% - 20px) center ;
+    background-size: 20px;
+    background-repeat: no-repeat;
+}
+.container .user-form .inputs form input::placeholder{
+    font-size: 0.75rem;
+    color: rgb(97, 95, 109);
+}
+.container .user-form .inputs form .submit{
+    padding: 12px 0;
+    background-color: var(--Green);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 0;
+    box-shadow: 0px 3px 1px 0px #209361e6;
+}
+.container .user-form .inputs p.error{
+    display:none ;
+    font-size: 0.65rem;
+    color: var(--Red);
+    text-align: end;
+    margin: -10px 5px 0;
+}
+.container .user-form .inputs p.error.active{
+    display: block;
+}
+
+.container .user-form .inputs p:last-child{
+    color: var(--Grayish-Blue);
+    font-size: 0.55rem;
+    text-align: center;
+    margin: 10px auto 0;
+}
+.container .user-form .inputs p:last-child span{
+    color: var(--Red);
+    font-size: 0.55rem;
+}
+@media (max-width:876px) {
+    .container{
+        background-color: var(--Red);
+        background-image: url(../images/bg-intro-mobile.png);
+        padding: 100px 25px;
+        display: flex;
+        flex-direction: column;
+    }
+    .container .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container .content h2{
+        text-align: center;
+    }
+    .container .content p{
+        text-align: center;
+        max-width: 245px;
+    }
+    .container .user-form{
+        margin: 0;
+        margin-top: 20px;
+        width: 300px;
+    }
+    .container .user-form .offer{
+        flex-direction: column;
+        padding: 20px;
+    }
+    .container .user-form .offer p{
+        max-width: 175px
+    }
+    .container .user-form  form .inputs input{
+        padding: 12px 15px;
+    }
+    .container .user-form form .inputs input.error{
+        background-position: calc(100% - 10px) center;
+    }
+    .container .user-form .inputs p:last-child {
+        max-width: 220px;
+        font-size: 0.65rem;
+    }
+    .container .user-form .inputs p:last-child span{
+        font-size: 0.65rem;
+    }
+}
+
+/* End styles */
