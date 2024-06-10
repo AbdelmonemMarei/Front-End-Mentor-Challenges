@@ -37,7 +37,7 @@ Users should be able to:
 ### Links
 
 - Github URL: [Github Source Files](https://github.com/AbdelmonemMarei/Front-End-Mentor-Challenges/tree/main/Junior/expenses-chart-component-main)
-- Live Site URL: [Live Site URL](https://abdelmonemmarei.github.io/Front-End-Mentor-Challenges/Newbie/four-card-feature-section-master/)
+- Live Site URL: [Live Site URL](https://abdelmonemmarei.github.io/Front-End-Mentor-Challenges/Junior/expenses-chart-component-main/)
 
 
 ## My process
