@@ -1,0 +1,175 @@
+:root{
+    --Soft-red: hsl(10, 79%, 65%);
+    --Cyan: hsl(186, 34%, 60%);
+    --Dark-brown: hsl(25, 47%, 15%);
+    --Medium-brown: hsl(28, 10%, 53%);
+    --Cream: hsl(27, 66%, 92%);
+    --Very-pale-orange: hsl(33, 100%, 98%);
+}
+/* global styles */
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+}
+/* -------------------------- */
+/* start styles */
+
+.container{
+    min-height: 100vh;
+    background-color: var(--Cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .card-container{
+    max-width: 400px;
+}
+.container .card-container .balance-card{
+    background-color: var(--Soft-red);
+    padding: 20px;
+    color: var(--Very-pale-orange);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.container .card-container .balance-card p:first-child{
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.container .card-container .balance-card p:last-child{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.container .card-container .spending-card{
+    background-color: var(--Very-pale-orange);
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.container .card-container .spending-card h2{
+    font-size: 1.35rem;
+    color: var(--Dark-brown);
+}
+.container .card-container .spending-card .ratings{
+    min-height: 250px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 15px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid var(--Cream);
+}
+.container .card-container .spending-card .ratings >div{
+    position: relative;
+    background-color: var(--Soft-red);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 35px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    cursor: pointer;
+}
+.container .card-container .spending-card .ratings >div.clicked{
+    background-color: var(--Cyan);
+}
+.container .card-container .spending-card .ratings >div:hover::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: var(--Cream);
+    opacity: 0.2;
+}
+.container .card-container .spending-card .ratings >div:hover::after{
+    content: "$"attr(data-amount);
+    position: absolute;
+    top: -35px;
+    color: white;
+    background-color: var(--Dark-brown);
+    width: fit-content;
+    padding: 5px;
+    font-size: 0.75rem;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.container .card-container .spending-card .ratings >div span{
+    display: block;
+    font-size: 0.75rem;
+    color: var(--Medium-brown);
+    transform: translateY(30px);
+    -webkit-transform: translateY(30px);
+    -moz-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    -o-transform: translateY(30px);
+}
+.container .card-container .spending-card .month-brief{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+.container .card-container .spending-card .month-brief >div:first-child >p:first-child{
+    font-size: 0.75rem;
+    color: var(--Medium-brown);
+}
+.container .card-container .spending-card .month-brief >div:first-child >p:last-child{
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--Dark-brown);
+}
+.container .card-container .spending-card .month-brief >div:last-child >p:first-child{
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--Dark-brown);
+    text-align: end;
+}
+.container .card-container .spending-card .month-brief >div:last-child >p:last-child{
+    font-size: 0.75rem;
+    color: var(--Medium-brown);
+}
+
+@media (max-width:420px) {
+    .container .card-container{
+        max-width: 350px;
+        margin: 25px auto;
+    }
+    .container .card-container .spending-card{
+        padding: 15px;
+    }
+    .container .card-container .spending-card h2{
+        font-size: 1.25rem;
+    }
+    .container .card-container .spending-card .ratings >div{
+        width: 30px;
+    }
+    .container .card-container .spending-card .month-brief >div:first-child >p:last-child{
+        font-size: 1.5rem;
+    }
+}
+/* End styles */
