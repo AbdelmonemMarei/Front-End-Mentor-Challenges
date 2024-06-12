@@ -1,0 +1,241 @@
+:root{
+    --Gradient-from: hsl(6, 100%, 80%); 
+    --Gradient-to: hsl(335, 100%, 65%);
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Dark-Blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);
+}
+/* global styles */
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+/* -------------------------- */
+/* start styles */
+.container{
+    background-color: var(--Very-Dark-Blue);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.container::before{
+    content: "";
+    position: absolute;
+    background-image: url(../images/bg-desktop.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50%;
+    top: 50%;
+    left: 0;
+    z-index: 0;
+}
+.container .cards-container{
+    position: absolute;
+    display: flex;
+    align-items: end;
+}
+.container .cards-container >div{
+    background-color: var(--Dark-Blue);
+}
+.container .cards-container .option-card{
+    padding: 40px;
+    width: 300px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-top-right-radius: 90px;
+    margin-right: 20px;
+}
+.container .cards-container .option-card >img{
+    width: 130px;
+}
+.container .cards-container .option-card .icons{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 150px;
+}
+.container .cards-container .option-card .icons >div{
+    background-color:var(--Very-Dark-Blue);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.container .cards-container .storage-card{
+    width: 450px;
+    padding: 35px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    position: relative;
+}
+.container .cards-container .storage-card::before{
+    content: "";
+    width: 0;
+    border-color:transparent transparent white  white  ;
+    border-width: 15px;
+    border-style: solid;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    transform: rotatez(45deg);
+    -webkit-transform: rotatez(45deg);
+    -moz-transform: rotatez(45deg);
+    -ms-transform: rotatez(45deg);
+    -o-transform: rotatez(45deg);
+}
+.container .cards-container .storage-card h2{
+    color: var(--Pale-Blue);
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+.container .cards-container .storage-card h2 span{
+    font-weight: 700;
+}
+.container .cards-container .storage-card .storage-bar{
+    width: 100%;
+    height: 16px;
+    background-color: var(--Very-Dark-Blue);
+    margin: 10px 0;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    position: relative;
+}
+.container .cards-container .storage-card .storage-bar::before{
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 75%;
+    height: 12px;
+    background-image: linear-gradient(to right,var(--Gradient-from),var(--Gradient-to));
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.container .cards-container .storage-card .storage-bar::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    top: 3px;
+    left: calc(75% - 10px);
+    background-color: var(--Pale-Blue);
+}
+.container .cards-container .storage-card .storage-limits{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--Pale-Blue);
+}
+.container .cards-container .storage-card .storage-limits >p{
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+.container .cards-container .storage-card .storage-indicator{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: white;
+    width: 160px;
+    padding: 10px;
+    top: -40px;
+    right: 30px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--Grayish-Blue);
+}
+.container .cards-container .storage-card .storage-indicator span{
+    font-weight: 700;
+    font-size: 2.5rem;
+    position: relative;
+    margin-right: 10px;
+    color: black;
+}
+
+@media (max-width:800px) {
+    .container::before{
+        background-image: url(../images/bg-mobile.png);
+        background-size: 350px auto;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+}
+    .container .cards-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .container .cards-container .option-card{
+        width: 280px;
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    .container .cards-container .storage-card{
+        width: 280px;
+        padding: 30px;
+        padding-bottom: 40px;
+        text-align: center;
+    }
+    .container .cards-container .storage-card::before{
+        content: none;
+    }
+    .container .cards-container .storage-card h2{
+        font-size: 0.85rem;
+    }
+    .container .cards-container .storage-card .storage-indicator{
+        position: absolute;
+        background-color: white;
+        width: 150px;
+        top: 105px;
+        right: 50%;
+        font-size: 0.75rem;
+        transform: translateX(50%);
+        -webkit-transform: translateX(50%);
+        -moz-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+        -o-transform: translateX(50%);
+    }
+}
+/* End styles */
