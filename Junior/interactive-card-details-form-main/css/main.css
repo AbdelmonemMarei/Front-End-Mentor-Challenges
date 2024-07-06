@@ -1,0 +1,266 @@
+:root{
+	--Linear-gradient-active-input-border:linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+	--Red-input-errors: hsl(0, 100%, 66%);
+	--White:hsl(0, 0%, 100%);
+	--Light-grayish-violet: hsl(270, 3%, 87%);
+	--Dark-grayish-violet: hsl(279, 6%, 55%);
+	--Very-dark-violet: hsl(278, 68%, 11%);
+}
+/* global styles */
+*{
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 18px;
+}
+.none{
+	display: none !important;
+}
+/* -------------------------- */
+/* start styles */
+.fields-container{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	width: 950px;
+	background-color: var(--White);
+	height: 100vh;
+	z-index: 1;
+}
+.fields-container::before{
+	content: "";
+	position: absolute;
+	background-image: url(../images/bg-main-desktop.png);
+	width: 350px;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+.fields-container .cards{
+	display: flex;
+	flex-direction: column;
+	color: var(--White);
+	margin-left: 50px;
+}
+.fields-container .cards >div{
+	width: 310px;
+	height: 180px;
+	padding: 20px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	box-shadow: 0px 3px 10px 3px #6f6f6f59
+}
+.fields-container .cards .front-card{
+	background-image: url(../images/bg-card-front.png);
+	margin-bottom: 30px;
+	text-transform: uppercase;
+}
+.fields-container .cards .front-card img{
+	width: 64px;
+}
+.fields-container .cards .front-card .card-number{
+	margin-top: 40px;
+	margin-bottom: 15px;
+	font-size: 1.25rem;
+	letter-spacing: 1px;
+}
+.fields-container .cards .front-card .person-info{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.fields-container .cards .front-card .person-info >p{
+	font-size: 0.65rem;
+	letter-spacing: 1px;
+}
+.fields-container .cards .backWard-card{
+	background-image: url(../images/bg-card-back.png);
+	margin-left: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	background-size: cover;
+}
+.fields-container .cards .backWard-card .cvc{
+	margin-bottom: 5px;
+	margin-right: 10px;
+	font-size: 00.65rem;
+}
+.fields-container .form-front{
+	width: 330px;
+	margin-left: 100px;
+}
+.fields-container .form-front form >div{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 10px;
+}
+.fields-container .form-front form >div label,  .fields-container .form-front form >div p{
+	font-size: 0.65rem;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font-weight: 600;
+	margin-bottom: 10px;
+	color: var(--Very-dark-violet);
+}
+.fields-container .form-front form >div input{
+	position: relative;
+	padding: 8px 15px;
+	font-size: 1rem;
+	font-weight: 600;
+	outline: none;
+	border: 1px solid var(--Dark-grayish-violet);
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+.fields-container .form-front form >div .error-text{
+	color: var(--Red-input-errors);
+	font-size: 00.65rem;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	text-transform: none;
+	display: none;
+}
+.fields-container .form-front form >div .error-text.active{
+	display: block;
+}
+.fields-container .form-front form >div input::placeholder{
+	color: var(--Dark-grayish-violet);
+	font-weight: 300;
+}
+
+.fields-container .form-front form >div input.error{
+	border-color: var(--Red-input-errors);
+}
+
+.fields-container .form-front form >div input:focus{
+	background: linear-gradient(#fff, #fff) padding-box,var(--Linear-gradient-active-input-border) border-box;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+.fields-container .form-front form .input-data{
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+}
+.fields-container .form-front form .input-data .input-date .inputs{
+	display: flex;
+}
+.fields-container .form-front form .input-data .input-date input{
+	width: 80px;
+	padding: 8px 15px;
+	margin-right: 10px;
+}
+.fields-container .form-front form .input-data .cvc input{
+	width: 140px;
+}
+.fields-container .form-front form button,  .fields-container .form-validate button {
+	width: 330px;
+	border: none;
+	font-size: 0.85rem;
+	padding: 10px 0;
+	margin-top: 20px;
+	background-color: var(--Very-dark-violet);
+	color: var(--White);
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	cursor: pointer;
+}
+.fields-container .form-validate{
+	width: 330px;
+	margin-left: 100px;
+	text-align: center;
+}
+.fields-container .form-validate img{
+	width: 64px;
+	margin-bottom: 20px;
+}
+.fields-container .form-validate p:first-of-type{
+	font-size: 1.25rem;
+	font-weight: 500;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+.fields-container .form-validate p:nth-of-type(2){
+	font-size: 0.75rem;
+	color: var(--Dark-grayish-violet);
+	margin-top: 10px;
+	margin-bottom: 40px;
+}
+@media (max-width:991px) {
+	.fields-container{
+			flex-direction: column;
+			margin: auto;
+			width: 350px;
+			height: fit-content;
+	}
+	.fields-container::before{
+			background-image: url(../images/bg-main-mobile.png);
+			background-repeat: no-repeat;
+			width: 350px;
+			height: 250px;
+			top: 0;
+			margin: auto;
+}
+	.fields-container >div{
+		margin: 0 !important;
+	}
+	.fields-container .cards{
+		position: relative;
+		flex-direction: column-reverse;
+		margin-top: 40px !important;
+		margin-bottom: 120px !important;
+	}
+	.fields-container .cards >div{
+			width: 270px;
+			height: 150px;
+			background-size: cover;
+	}
+	.fields-container .cards .front-card img {
+			width: 50px;
+	}
+	.fields-container .cards .front-card{
+			position: absolute;
+			top: 84px;
+	}
+	.fields-container .cards .front-card .card-number {
+			margin-top: 30px;
+			margin-bottom: 10px;
+			font-size: 1rem;
+	}
+	.fields-container .cards .backWard-card{
+		margin-left: 55px;
+	}
+	.fields-container .cards .backWard-card .cvc {
+			margin-bottom: 7px;
+			margin-right: 14px;
+			font-size: 00.65rem;
+	}
+	.fields-container button{
+			margin-bottom: 40px;
+	}
+.fields-container .form-validate  {
+		height: 365px;
+	}
+	.fields-container .form-validate p:nth-of-type(2) {
+			font-size: 1rem;
+	}
+}
+/* End styles */
