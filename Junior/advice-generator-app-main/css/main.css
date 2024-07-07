@@ -1,0 +1,129 @@
+:root{
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+    --Very-pale-orange: hsl(33, 100%, 98%);
+}
+/* global styles */
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+}
+/* -------------------------- */
+/* start styles */
+.container{
+    background-color: var(--Dark-Blue);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-container{
+    position: relative;
+    background-color: var(--Dark-Grayish-Blue);
+    max-width: 450px;
+    min-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+.container .id{
+    text-transform: uppercase;
+    color: var(--Neon-Green);
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+    margin: 20px 0;
+}
+.container .advice{
+    color: var(--Light-Cyan);
+    text-align: center;
+    font-size: 2rem;
+    min-width: 350px;
+    padding: 0 20px;
+}
+.container .image{
+    background-image: url(../images/pattern-divider-desktop.svg);
+    height: 15px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 30px auto;
+}
+.container .icon{
+    background-color: var(--Neon-Green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: absolute;
+    top: calc(100% - 25px);
+    box-shadow: 0 0 0 0 var(--Neon-Green);
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    cursor: pointer;
+}
+/* load spinner */
+.container .icon.fetching{
+    -webkit-animation:spin 2s linear infinite;
+    -moz-animation:spin 2s linear infinite;
+    animation:spin 2s linear infinite;
+
+}
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
+.container .icon img{
+    width: 20px;
+}
+.container .icon:hover{
+    box-shadow: 0 0 15px 0 var(--Neon-Green)
+}
+
+@media (max-width:450px) {
+    .card-container{
+        max-width: 350px;
+    }
+    .container .image{
+        background-image: url(../images/pattern-divider-mobile.svg);
+        background-size: cover;
+    }
+    .container .icon{
+    height: 60px;
+    width: 60px;
+    top: calc(100% - 35px);
+    }
+    .container .icon img{
+        width: 25px;
+    }
+}
+
+/* End styles */
