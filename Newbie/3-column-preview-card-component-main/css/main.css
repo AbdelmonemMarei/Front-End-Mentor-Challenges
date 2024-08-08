@@ -19,8 +19,9 @@ h2{
 
 p{
     color: hsla(0, 0%, 100%, 0.75);
-    max-width: 240px;
-    line-height: 1.5;
+    max-width: 188px;
+    font-size: 0.85rem;
+    line-height: 1.75;
     word-spacing: 2px;
     margin: 25px 0;
 }
@@ -57,9 +58,9 @@ p{
 .cards-container >div button{
     margin: 40px 0px 20px;
     border: 3px solid transparent;
-    padding: 15px 45px;
+    padding: 12px 30px;
     border-radius: 30px;
-    font-size: 15px;
+    font-size: 0.85rem;
     cursor: pointer;
     transition: all 0.3s ease 0s;
     -webkit-transition: all 0.3s ease 0s;
