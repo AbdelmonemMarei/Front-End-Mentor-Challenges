@@ -4,7 +4,6 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
 ![Design](./design/desktop-preview.jpg) 
 ![Design](./design/desktop-thank-you-state.jpg) 
 
-
 ## Table of contents
 
 - [Overview](#overview)
@@ -31,9 +30,11 @@ Users should be able to:
 
 ### Screenshot
 ![Large Screen](./screenshot1.png) 
-![Small Screen](./screenshot2.png) 
-![Thank you screen ](./screenshot3.png) 
-
+![Large Screen Active](./screenshot2.png) 
+![Large Screen Feedback](./screenshot3.png) 
+![Small Screen](./screenshot4.png) 
+![Small Screen Active](./screenshot5.png) 
+![Small Screen Feedback ](./screenshot6.png) 
 
 ### Links
 
@@ -72,5 +73,4 @@ submitBtn.addEventListener("click",(e)=>{})
 
 - Frontend Mentor - [@AbdelmonemMarei](https://www.frontendmentor.io/profile/AbdelmonemMarei)
 - Github - [AbdelmonemMarei](https://github.com/AbdelmonemMarei)
-
 

@@ -18,30 +18,22 @@ body{
 }
 h2{
     color: var(--White);
-    margin: 25px 0;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 /* -------------------------- */
 /* start styles */
 .container{
     background-color: hsl(228deg 11% 9%);
-    min-height: 700px;
-}
-.card{
-    position: relative;
+    min-height: 100vh;
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 .card >div{
     background-color: var(--Very-Dark-Blue);
-    max-width: 300px;
-    padding: 25px 20px;
-    position: absolute;
-    top: 350px;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
+    max-width: 320px;
+    padding: 25px;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -49,7 +41,7 @@ h2{
     -o-border-radius: 20px;
 }
 .card .card-forward .icon{
-    display: inline;
+    display: inline-flex;
     background-color: var(--Dark-Blue);
     padding: 10px;
     border-radius: 50%;
@@ -58,12 +50,12 @@ h2{
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
 }
-.card .card-forward .icon img{
-    margin: -3px 0;
-}
+
 .card .card-forward p{
     color: var(--Light-Grey);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    font-size: 0.85rem;
+    line-height: 1.75;
 }
 .card .card-forward .rate {
     display: flex;
@@ -90,23 +82,24 @@ h2{
     -ms-transition: 0.5s;
     -o-transition: 0.5s;
     cursor: pointer;
+    font-weight: 600;
 }
 .card .card-forward .rate .rating:hover{
     background-color: var(--Orange);
-    color: var(--White);
+    color: var(--Very-Dark-Blue);
 }
 .card .card-forward .rate .rating.active{
-    background-color: var(--Medium-Grey);
-    color: var(--White);
+    background-color: var(--White);
+    color: var(--Very-Dark-Blue);
 }
 .card .card-forward button{
     background-color: var(--Orange);
     border: none;
-    width: 300px;
-    padding: 15px 0;
+    width: 320px;
+    padding: 12px 0;
     border-radius: 30px;
     text-transform: uppercase;
-    color: var(--White);
+    color: var(--Very-Dark-Blue);
     letter-spacing: 2px;
     transition: 0.5s;
     -webkit-transition: 0.5s;
@@ -114,10 +107,11 @@ h2{
     -ms-transition: 0.5s;
     -o-transition: 0.5s;
     cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
 }
 .card .card-forward button:hover{
     background-color: var(--White);
-    color: var(--Orange);
 }
 .card .card-backward{
     display: none;
@@ -129,7 +123,7 @@ h2{
 }
 .card .card-backward .selected{
     background-color: var(--Dark-Blue);
-    color: var(--Orange);
+    color: hsl(30deg 87.1% 37.53%);
     margin: 20px 0;
     padding: 5px 20px;
     border-radius: 20px;
@@ -146,5 +140,13 @@ h2{
     color: var(--Light-Grey);
     text-align: center;
     line-height: 1.5;
+    font-size: 0.85rem;
+    max-width: 310px;
+}
+
+@media (max-width:450px) {
+    .card >div , .card .card-forward button{
+        max-width: 300px;
+    }
 }
 /* End styles */
