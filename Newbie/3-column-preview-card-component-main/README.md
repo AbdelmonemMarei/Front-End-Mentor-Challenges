@@ -1,7 +1,8 @@
-# Frontend Mentor - 3-column preview card component solution
+# Frontend Mentor - Interactive rating component solution
 
-This is a solution to the [3-column preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
-![Design preview for the 3-column preview card component coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [Interactive rating component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+![Design](./design/desktop-preview.jpg) 
+![Design](./design/desktop-thank-you-state.jpg) 
 
 ## Table of contents
 
@@ -12,6 +13,7 @@ This is a solution to the [3-column preview card component challenge on Frontend
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
 - [Author](#author)
 
 
@@ -21,30 +23,51 @@ This is a solution to the [3-column preview card component challenge on Frontend
 
 Users should be able to:
 
-- View the optimal layout depending on their device's screen size
-- See hover states for interactive elements
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Select and submit a number rating
+- See the "Thank you" card state after submitting a rating
 
 ### Screenshot
-
 ![Large Screen](./screenshot1.png) 
-![Small Screen](./screenshot2.png) 
+![Large Screen Active](./screenshot2.png) 
+![Large Screen Feedback](./screenshot3.png) 
+![Small Screen](./screenshot4.png) 
+![Small Screen Active](./screenshot5.png) 
+![Small Screen Feedback ](./screenshot6.png) 
 
 ### Links
 
-- Github URL: [Github Source Files](https://github.com/AbdelmonemMarei/Front-End-Mentor-Challenges/tree/main/Newbie/3-column-preview-card-component-main)
-- Live Site URL: [Live Site URL](https://abdelmonemmarei.github.io/Front-End-Mentor-Challenges/Newbie/3-column-preview-card-component-main/)
+- Github URL: [Github Source Files](https://github.com/AbdelmonemMarei/Front-End-Mentor-Challenges/tree/main/Newbie/interactive-rating-component-main)
+- Live Site URL: [Live Site URL](https://abdelmonemmarei.github.io/Front-End-Mentor-Challenges/Newbie/interactive-rating-component-main/)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
 - Flexbox
-- Mobile-first workflow
+- CSS Grid
+- Responsive Web Design
+- Pure JS 
+
 
 ### What I learned
-- Use flex box direction to make site resposive
+
+Use JS to select and add events elements 
+
+```
+```js
+const ratingBtns = document.querySelectorAll(".rating");
+
+submitBtn.addEventListener("click",(e)=>{})
+```
+
+
+
+### Continued development
+
+- Keep enhance JS Code 
 
 ## Author
 
