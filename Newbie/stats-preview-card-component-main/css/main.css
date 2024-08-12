@@ -18,7 +18,7 @@ body{
 }
 p{
     color:var(--Soft-blue);
-    font-size: 1rem;
+    font-size: 0.75rem;
 }
 /* -------------------------- */
 /* start styles */
@@ -38,13 +38,13 @@ p{
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-    min-width: 950px;
+    min-width: 870px;
 }
 .container .stats-card .content{
     padding: 50px;
 }
 .container .stats-card .content h2{
-    font-size: 2rem;
+    font-size: 1.75rem;
     color: var(--White-MH-Stats);
     margin-bottom: 30px;
     max-width: 350px;
@@ -54,9 +54,9 @@ p{
 }
 .container .stats-card .content >p{
     color: var(--Slightly-transparent-white-SH);
-    font-size: 1rem;
+    font-size: 0.85rem;
     line-height: 1.5;
-    max-width: 750px;
+    max-width: 680px;
 }
 .container .stats-card .content >div{
     display: flex;
@@ -66,7 +66,7 @@ p{
     text-transform: uppercase;
 }
 .container .stats-card .content >div p:first-of-type{
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: var(--White-MH-Stats);
     font-weight: 700;
     margin-bottom: 5px;
@@ -104,32 +104,32 @@ p{
     z-index: 2;
 }
 
-@media (max-width:991px) {
+@media (max-width:890px) {
     .container{
         padding: 40px 10px;
     }
     .container .stats-card{
         display: flex;
         flex-direction: column-reverse;
-        min-width: 320px;
+        min-width: 280px;
         text-align: center;
     }
     .container .stats-card .content{
         padding: 20px;
     }
     .container .stats-card .content >h2{
-        max-width: 320px;
+        max-width: 280px;
         margin-top: 20px;
     }
     .container .stats-card .content >p{
-        max-width: 275px;
+        max-width: 235px;
         margin: auto;
     }
     .container .stats-card .content >div{
         display: flex;
         flex-direction: column;
-        gap: 40px;
-        margin: 40px 0;
+        gap: 30px;
+        margin: 30px 0;
         color: var(--Slightly-transparent-white-SH);
         text-transform: uppercase;
     }
