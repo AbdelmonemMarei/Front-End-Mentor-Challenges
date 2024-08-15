@@ -26,7 +26,6 @@
     position: relative;
     background-color: var(--Dark-Grayish-Blue);
     max-width: 450px;
-    min-width: 350px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,8 +47,8 @@
 .container .advice{
     color: var(--Light-Cyan);
     text-align: center;
-    font-size: 2rem;
-    min-width: 350px;
+    font-size: 1.75rem;
+    min-width: 300px;
     padding: 0 20px;
 }
 .container .image{
@@ -108,21 +107,34 @@
     box-shadow: 0 0 15px 0 var(--Neon-Green)
 }
 
-@media (max-width:450px) {
-    .card-container{
-        max-width: 350px;
+@media (max-width:480px) {
+    .container .card-container{
+        max-width: 340px;
     }
-    .container .image{
+    .container .card-container .advice{
+        padding: 0;
+    }
+    .container .card-container .image{
         background-image: url(../images/pattern-divider-mobile.svg);
         background-size: cover;
     }
-    .container .icon{
-    height: 60px;
-    width: 60px;
-    top: calc(100% - 35px);
+    .container .card-container .icon{
+        height: 60px;
+        width: 60px;
+        top: calc(100% - 35px);
     }
-    .container .icon img{
+    .container .card-container .icon img{
         width: 25px;
+    }
+}
+
+@media (max-width:350px) {
+    .card-container{
+        max-width: 300px !important;
+        padding: 25px 10px;
+    }
+    .container .card-container .advice{
+        min-width: 290px;
     }
 }
 
