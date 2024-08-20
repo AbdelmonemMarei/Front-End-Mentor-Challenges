@@ -172,4 +172,25 @@
         font-size: 1.5rem;
     }
 }
+
+@media (max-width:360px) {
+    .container .card-container{
+        max-width: 280px;
+    }
+    .container .card-container .balance-card p:last-child{
+        font-size: 1.25rem;
+    }
+    .container .card-container .spending-card{
+        padding: 15px;
+    }
+    .container .card-container .spending-card h2{
+        font-size: 1rem;
+    }
+    .container .card-container .spending-card .ratings >div{
+        width: 25px;
+    }
+    .container .card-container .spending-card .month-brief >div:first-child >p:last-child{
+        font-size: 1.25rem;
+    }
+}
 /* End styles */
