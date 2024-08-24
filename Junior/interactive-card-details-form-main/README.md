@@ -32,13 +32,15 @@ Users should be able to:
 
 ![Large Screen](./screenshot1.png) 
 ![Large Screen Error](./screenshot2.png) 
-![Small Screen](./screenshot3.png) 
-![Small Screen Error](./screenshot4.png) 
+![Large Screen Correct](./screenshot3.png) 
+![Small Screen](./screenshot4.png) 
+![Small Screen Error](./screenshot5.png) 
+![Small Screen Correct](./screenshot6.png) 
 
 ### Links
 
 - Github URL: [Github Source Files](https://github.com/AbdelmonemMarei/Front-End-Mentor-Challenges/tree/main/Junior/interactive-card-details-form-main)
-- Live Site URL: [Live Site URL](https://abdelmonemmarei.github.io/Front-End-Mentor-Challenges/Junior/interactive-card-details-form-main/)
+- Live Site URL: [Live Site URL](https://abdelmonemmarei.github.io/Front-End-Mentor-Challenges/Newbie/four-card-feature-section-master/)
 
 ## My process
 

@@ -18,33 +18,38 @@
 }
 /* -------------------------- */
 /* start styles */
-.fields-container{
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.container{
 	position: relative;
-	width: 950px;
 	background-color: var(--White);
 	height: 100vh;
 	z-index: 1;
 }
-.fields-container::before{
+.container::before{
 	content: "";
 	position: absolute;
 	background-image: url(../images/bg-main-desktop.png);
-	width: 350px;
+	width: 400px;
 	height: 100%;
 	top: 0;
 	left: 0;
 	z-index: -1;
 }
-.fields-container .cards{
+.container .fields-container{
+	position: absolute;
+	top: 50%;
+	left: 170px;
+	transform: translateY(-50%);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 850px;
+}
+.container .fields-container .cards{
 	display: flex;
 	flex-direction: column;
 	color: var(--White);
-	margin-left: 50px;
 }
-.fields-container .cards >div{
+.container .fields-container .cards >div{
 	width: 310px;
 	height: 180px;
 	padding: 20px;
@@ -57,30 +62,30 @@
 	background-repeat: no-repeat;
 	box-shadow: 0px 3px 10px 3px #6f6f6f59
 }
-.fields-container .cards .front-card{
+.container .fields-container .cards .front-card{
 	background-image: url(../images/bg-card-front.png);
 	margin-bottom: 30px;
 	text-transform: uppercase;
 }
-.fields-container .cards .front-card img{
+.container .fields-container .cards .front-card img{
 	width: 64px;
 }
-.fields-container .cards .front-card .card-number{
+.container .fields-container .cards .front-card .card-number{
 	margin-top: 40px;
 	margin-bottom: 15px;
 	font-size: 1.25rem;
 	letter-spacing: 1px;
 }
-.fields-container .cards .front-card .person-info{
+.container .fields-container .cards .front-card .person-info{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
-.fields-container .cards .front-card .person-info >p{
+.container .fields-container .cards .front-card .person-info >p{
 	font-size: 0.65rem;
 	letter-spacing: 1px;
 }
-.fields-container .cards .backWard-card{
+.container .fields-container .cards .backWard-card{
 	background-image: url(../images/bg-card-back.png);
 	margin-left: 70px;
 	display: flex;
@@ -88,21 +93,20 @@
 	justify-content: flex-end;
 	background-size: cover;
 }
-.fields-container .cards .backWard-card .cvc{
+.container .fields-container .cards .backWard-card .cvc{
 	margin-bottom: 5px;
 	margin-right: 10px;
 	font-size: 00.65rem;
 }
-.fields-container .form-front{
+.container .fields-container .form-front{
 	width: 330px;
-	margin-left: 100px;
 }
-.fields-container .form-front form >div{
+.container .fields-container .form-front form >div{
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 10px;
 }
-.fields-container .form-front form >div label,  .fields-container .form-front form >div p{
+.container .fields-container .form-front form >div label,  .container .fields-container .form-front form >div p{
 	font-size: 0.65rem;
 	letter-spacing: 2px;
 	text-transform: uppercase;
@@ -110,7 +114,7 @@
 	margin-bottom: 10px;
 	color: var(--Very-dark-violet);
 }
-.fields-container .form-front form >div input{
+.container .fields-container .form-front form >div input{
 	position: relative;
 	padding: 8px 15px;
 	font-size: 1rem;
@@ -123,7 +127,7 @@
 	-ms-border-radius: 5px;
 	-o-border-radius: 5px;
 }
-.fields-container .form-front form >div .error-text{
+.container .fields-container .form-front form >div .error-text{
 	color: var(--Red-input-errors);
 	font-size: 00.65rem;
 	margin-top: 5px;
@@ -131,19 +135,19 @@
 	text-transform: none;
 	display: none;
 }
-.fields-container .form-front form >div .error-text.active{
+.container .fields-container .form-front form >div .error-text.active{
 	display: block;
 }
-.fields-container .form-front form >div input::placeholder{
+.container .fields-container .form-front form >div input::placeholder{
 	color: var(--Dark-grayish-violet);
 	font-weight: 300;
 }
 
-.fields-container .form-front form >div input.error{
+.container .fields-container .form-front form >div input.error{
 	border-color: var(--Red-input-errors);
 }
 
-.fields-container .form-front form >div input:focus{
+.container .fields-container .form-front form >div input:focus{
 	background: linear-gradient(#fff, #fff) padding-box,var(--Linear-gradient-active-input-border) border-box;
 	border: 1px solid transparent;
 	border-radius: 5px;
@@ -152,23 +156,23 @@
 	-ms-border-radius: 5px;
 	-o-border-radius: 5px;
 }
-.fields-container .form-front form .input-data{
+.container .fields-container .form-front form .input-data{
 	display: flex;
 	flex-direction: row;
 	gap: 10px;
 }
-.fields-container .form-front form .input-data .input-date .inputs{
+.container .fields-container .form-front form .input-data .input-date .inputs{
 	display: flex;
 }
-.fields-container .form-front form .input-data .input-date input{
+.container .fields-container .form-front form .input-data .input-date input{
 	width: 80px;
 	padding: 8px 15px;
 	margin-right: 10px;
 }
-.fields-container .form-front form .input-data .cvc input{
+.container .fields-container .form-front form .input-data .cvc input{
 	width: 140px;
 }
-.fields-container .form-front form button,  .fields-container .form-validate button {
+.container .fields-container .form-front form button,  .container .fields-container .form-validate button {
 	width: 330px;
 	border: none;
 	font-size: 0.85rem;
@@ -183,84 +187,159 @@
 	-o-border-radius: 5px;
 	cursor: pointer;
 }
-.fields-container .form-validate{
+.container .fields-container .form-validate{
 	width: 330px;
-	margin-left: 100px;
 	text-align: center;
 }
-.fields-container .form-validate img{
+.container .fields-container .form-validate img{
 	width: 64px;
 	margin-bottom: 20px;
 }
-.fields-container .form-validate p:first-of-type{
+.container .fields-container .form-validate p:first-of-type{
 	font-size: 1.25rem;
 	font-weight: 500;
 	letter-spacing: 2px;
 	text-transform: uppercase;
 }
-.fields-container .form-validate p:nth-of-type(2){
+.container .fields-container .form-validate p:nth-of-type(2){
 	font-size: 0.75rem;
 	color: var(--Dark-grayish-violet);
 	margin-top: 10px;
 	margin-bottom: 40px;
 }
-@media (max-width:991px) {
-	.fields-container{
-			flex-direction: column;
-			margin: auto;
-			width: 350px;
-			height: fit-content;
+@media (max-width:1040px) {
+	.container::before{
+		width: 320px;
+
 	}
-	.fields-container::before{
+	.container .fields-container{
+		left: 90px;
+	}
+}
+@media (max-width:978px) {
+	.container::before{
 			background-image: url(../images/bg-main-mobile.png);
 			background-repeat: no-repeat;
 			width: 350px;
 			height: 250px;
 			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		.container .fields-container{
+			flex-direction: column;
 			margin: auto;
-}
-	.fields-container >div{
-		margin: 0 !important;
+			width: 350px;
+			height: fit-content;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
 	}
-	.fields-container .cards{
+	.container .fields-container .cards{
 		position: relative;
 		flex-direction: column-reverse;
-		margin-top: 40px !important;
-		margin-bottom: 120px !important;
+		margin-top: 40px;
+		margin-bottom: 120px;
 	}
-	.fields-container .cards >div{
-			width: 270px;
-			height: 150px;
-			background-size: cover;
+	.container .fields-container .cards >div{
+		width: 270px;
+		height: 150px;
+		background-size: cover;
 	}
-	.fields-container .cards .front-card img {
-			width: 50px;
+	.container .fields-container .cards .front-card img {
+		width: 50px;
 	}
-	.fields-container .cards .front-card{
-			position: absolute;
-			top: 84px;
+	.container .fields-container .cards .front-card{
+		position: absolute;
+		top: 84px;
 	}
-	.fields-container .cards .front-card .card-number {
-			margin-top: 30px;
-			margin-bottom: 10px;
-			font-size: 1rem;
+	.container .fields-container .cards .front-card .card-number {
+		margin-top: 30px;
+		margin-bottom: 10px;
+		font-size: 1rem;
 	}
-	.fields-container .cards .backWard-card{
+	.container .fields-container .cards .backWard-card{
 		margin-left: 55px;
 	}
-	.fields-container .cards .backWard-card .cvc {
-			margin-bottom: 7px;
-			margin-right: 14px;
-			font-size: 00.65rem;
+	.container .fields-container .cards .backWard-card .cvc {
+		margin-bottom: 7px;
+		margin-right: 14px;
+		font-size: 00.65rem;
 	}
-	.fields-container button{
-			margin-bottom: 40px;
+	.container .fields-container button{
+		margin-bottom: 40px;
 	}
-.fields-container .form-validate  {
+.container .fields-container .form-validate  {
 		height: 365px;
 	}
-	.fields-container .form-validate p:nth-of-type(2) {
-			font-size: 1rem;
+	.container .fields-container .form-validate p:nth-of-type(2) {
+		font-size: 1rem;
 	}
+}
+@media (max-width:370px) {
+	.container::before{
+			width: 280px;
+		}
+		.container .fields-container{
+			width: 280px;
+	}
+	.container .fields-container .cards >div{
+		width: 230px;
+		height: 130px;
+	}
+	.container .fields-container .cards .front-card .card-number {
+		margin-top: 15px;
+		margin-bottom: 10px;
+		font-size: 0.75rem;
+	}
+	.container .fields-container .cards .backWard-card{
+		margin-left: 40px;
+	}
+	.container .fields-container .cards .backWard-card .cvc {
+		margin-bottom: 7px;
+		margin-right: 14px;
+		font-size: 00.65rem;
+	}
+	.container .fields-container .form-front {
+		width: 280px;
+	}
+	.container .fields-container .form-front form .input-data{
+		flex-direction: column;
+	}
+	.container .fields-container .form-front form button, .container .fields-container .form-validate button{
+		margin-bottom: 40px;
+		width: 280px;
+	}
+	.container .fields-container .form-validate  {
+		height: 280px;
+		margin: 0;
+	}
+	.container .fields-container .cards .backWard-card .cvc {
+        margin-bottom: 5px;
+        margin-right: 10px;
+	}
+	.container .fields-container .form-validate p:nth-of-type(2) {
+		font-size: 1rem;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Copyright */
+.attribution{
+	padding: 10px 0;
+	font-size:0.65rem ;
+	text-align: center;
+}
+.attribution >a{
+font-size:0.65rem ;
 }
 /* End styles */
