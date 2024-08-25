@@ -222,7 +222,7 @@
 .container .calc-container .user-output button.active:hover{
     background-color: var(--hover-cyan);
 }
-@media (max-width:678px) {
+@media (max-width:697px) {
     .container{
         padding: 40px 0;
     }
@@ -255,6 +255,12 @@
     }
     .container .calc-container .user-output button{
         margin-top: 0;
+    }
+}
+@media (max-width:360px) {
+    .container .calc-container{
+        width: 290px;
+        padding: 20px 15px;
     }
 }
 /* End styles */
