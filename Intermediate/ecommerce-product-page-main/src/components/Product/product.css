@@ -1,0 +1,24 @@
+.product{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 85px;
+    padding-top: 40px;
+    /* padding-left: 20px; */
+}
+@media (max-width:991px) {
+    .product{
+        align-items: end;
+        padding-left: 0;
+    }
+}
+
+@media (max-width:776px) {
+    .product{
+        flex-direction: column;
+        width: 300px;
+        padding: 0;
+        margin: 0;
+        gap: 20px;
+    }
+}

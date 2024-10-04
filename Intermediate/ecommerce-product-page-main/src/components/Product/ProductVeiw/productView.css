@@ -1,0 +1,105 @@
+.product-veiw-lg{
+    padding-top: 25px;
+}
+.product-veiw-lg>div{
+    width: 350px;
+}
+.product-veiw-lg .main-image{
+    cursor: pointer;
+}
+.product-veiw-lg .thumbnails{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.product-veiw-lg .thumbnails>div {
+    width: 70px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    position: relative;
+}
+.product-veiw-lg img{
+    max-width: 100%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.product-veiw-lg .thumbnails .active::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 68px;
+    height: 68px;
+    background-color: #cac4c48f;
+    z-index: 1;
+    border-radius: 10px;
+    border: 2px solid rgb(255, 125, 26);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.product-veiw-lg .thumbnails >div::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 70px;
+    background-color: transparent;
+    z-index: 1;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.product-veiw-lg .thumbnails >div:hover::after{
+    background-color: #cac4c48f;
+    z-index: 1;
+}
+.product-veiw-sm .slider-container{
+    width: 300px;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+.product-veiw-sm .slider-container >img{
+    max-width: 100%;
+    position: absolute;
+    top: -20px;
+}
+.product-veiw-sm .slider-container .slider{
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+.product-veiw-sm .slider-container .slider .button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
