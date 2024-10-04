@@ -2,7 +2,7 @@
   "name": "ecommerce-product-page-main",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://abdelmonemmarei.github.io/Front-End-Mentor-Challenges/Intermediate/ecommerce-product-page-main/public",
+  "homepage": "https://abdelmonemmarei.github.io/Front-End-Mentor-Challenges/Intermediate/ecommerce-product-page-main",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
